@@ -1,0 +1,248 @@
+html {
+    box-sizing: border-box;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-left {
+    align-self: flex-start;
+}
+
+#top-left img {
+    height: 50px;
+}
+
+#top-right {
+    align-self: flex-end;
+    padding-right: 5px;
+    margin-bottom: -17px;
+}
+
+#top-right img {
+    height: 20px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#form {
+    width: 50%;
+    height: 60%;
+    padding: 40px; 
+    align-self: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 2px 1px gray;    
+}
+
+#row-1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.7rem;
+    align-items: baseline;
+}
+
+#row-1 button {
+    margin-right: 25px;
+    font-size: 0.7rem;
+    color: white;
+    background-color: #103128;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 25px;
+    height: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#row-1 button:hover,
+#row-4 button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#row-1 #register {
+    background-color: white;
+    color: black;
+    margin-left: -20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#row-1 p,
+#row-5 p,
+.last-row {
+    cursor: pointer;
+}
+
+#row-2 {
+    font-weight: 800;
+}
+
+#row-3, #row-5 {
+    opacity: 0.7;
+}
+
+#row-3 {
+    margin-top: -30px;
+    margin-bottom: 5px;
+}
+
+.one-size {
+    font-size: 0.5rem;
+}
+
+#row-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    opacity: 0.4;
+}
+
+.login {
+    border: none;
+    border-bottom: 0.5px solid black;
+    width: 100%;
+    opacity: 0.2;
+}
+
+#next {
+    margin-top: 10px;
+    background-color: #103128;
+    color: white;
+    border: none;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    height: 20px;
+}
+
+#row-5 {
+    align-self: center;
+}
+
+#row-6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    font-size: 0.4rem;
+    width: 70%;
+    opacity: 0.4;
+}
+
+.last-row {
+    align-self: center;
+}
+
+.last-row button {
+    border: none;
+    font-size: 0.3rem;
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    #header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 25px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #top-left {
+        align-self: flex-start;
+    }
+    
+    #top-left img {
+        height: 70px;
+    }
+    
+    #top-right {
+        align-self: flex-end;
+        padding-right: 10px;
+        margin-bottom: -20px;
+    }
+    
+    #top-right img {
+        height: 25px;
+    }
+    
+    #main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 550px;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #form {
+        width: 25%;
+        height: 70%;
+        padding: 45px 80px; 
+        align-self: center;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 2px 2px 1px gray;    
+    }
+
+    #row-1 button {
+        height: 30px;
+    }
+
+    #row-1 register {
+        margin-left: -40px;
+    }
+
+    #row-2 {
+        margin-top: 20px;
+    }
+
+    #row-3 {
+        margin-bottom: 20px;
+        margin-top: -25px;
+    }
+
+    .one-size {
+        margin-top: 20px;
+        font-size: 0.5rem;
+    }
+
+    #next {
+        height: 30px;
+    }
+
+    #row-5 {
+        margin-bottom: 20px;
+    }
+
+    .last-row button {
+        font-size: 0.5rem;
+    }
+
+    #name,
+    #pass {
+        margin-top: 15px;
+        margin-bottom: 10px
+    }
+}

@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7rem;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+#left-side {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./image/backgorund-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#drugify img {
+  width: 120px;
+  height: 115px;
+  border-radius: 15px;
+}
+
+#right-side {
+  flex-basis: 40%;
+  background-color: #ffffff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#close-icon {
+  align-self: flex-end;
+}
+
+#close-icon img {
+  max-width: 23.27px;
+  height: 24px;
+}
+
+#upper-section {
+  display: flex;
+  flex-direction: column;
+  width: 142px;
+}
+
+#register, 
+#name, 
+.prompt, 
+#item-1, 
+#footer,
+button {
+  font-size: 0.7rem;
+}
+
+#welcome {
+  font-size: 1.4rem;
+  margin-bottom: -30px;
+  margin-top: -2px;
+}
+
+#top {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  align-items:baseline;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #0c9b9b;
+  color: #ffffff;
+  border-radius: 12px;
+  border: #0c9b9b;  
+  width: auto;
+  padding: 5px 15px;
+}
+
+button:hover,
+#close-icon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#register {
+  margin-left: 25px;
+}
+
+#login-details {
+  margin-top: 5px;
+}
+
+#name {
+  opacity: 0.7;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 280px;
+}
+
+input[type=password] {
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 280px;
+}
+
+#bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+
+#item-1 button {
+  border: none;
+  background-color: #ffffff;
+  color: gray;
+  padding: 0;
+}
+
+#item-1:hover {
+  cursor: pointer;
+}
+
+#footer {
+  opacity: 0.7;
+  align-self: center;
+  margin-top: 45px;
+}
