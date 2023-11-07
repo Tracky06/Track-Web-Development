@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Montserrat:wght@600;800&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style_create.css">
+    <title>Create Account Step 1</title>
 </head>
 <body>
     <div id="header">
@@ -21,27 +21,24 @@
     <div id="main-container">           
         <div id="form">
             <div id="row-1">
-                <button>Login</button>
-                <button id="register" onclick="redirect()"><strong>Create Account</strong></button>
+                <button><strong>Login</strong></button>
+                <button id="register" onclick="redirect()">Create Account</button>
+            </div>            
+            <div id="row-3" class="one-size">
+                <p>Step 1 of 2</p>
             </div>
             <div id="row-2">
-                <h2><b>Welcome</b></h2>
-            </div>
-            <div id="row-3" class="one-size">
-                <p>Please login to your account</p>
+                <h2><b>Create Account</b></h2>
             </div>
             <div id="row-4">
                 <form>
-                    <label for="email" class="one-size">Email</label><br>
+                    <label for="firstname" class="one-size">First Name</label><br>
                     <input type="text" id="name" class="login" onblur="getVal()"><br>
-                    <label for="password" class="one-size">Password</label><br>
-                    <input type="password" id="pass" class="login"><br>
+                    <label for="lastname" class="one-size">Last Name</label><br>
+                    <input type="text" id="pass" class="login" onblur="getVal()"><br>
                 </form>
                 <button id="next" onclick="newFunction()">Next</button>
-            </div>
-            <div id="row-5" class="one-size">
-                <p onclick="redirect()"><u>Trouble Signing in?</u></p>
-            </div>
+            </div>            
             <div id="row-6">
                 <div class="last-row">
                     <button onclick="redirect()">Sucasa c 2023</button>
