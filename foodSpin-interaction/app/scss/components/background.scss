@@ -1,0 +1,10 @@
+@use "../util/" as *;
+
+.background {
+  width: 100%;
+  height: rem(1177);
+  top: rem(-645);
+  left: rem(283);
+  border-radius: 50%;
+  background: var(--light-green);
+}

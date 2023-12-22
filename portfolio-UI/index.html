@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Heebo:wght@400;500;700;800;900&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+    <link rel="stylesheet" href="/dist/style.css" />
+    <script defer src="/dist/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <section class="header">
+        <button class="header__menu-button">
+          <div class="header__menu-icon"></div>
+        </button>
+      </section>
+      <nav>
+        <div class="box">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="#contact" scrollToBottom>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="profile">
+        <!-- Section 1-->
+        <div>
+          <img src="/images/john__icon.png" alt="John" class="profile__pic" />
+        </div>
+        <div class="profile__intro">
+          <div>
+            <h1>
+              Hi, I am John,
+              <span class="profile__intro--wrap">Creative Technologist</span>
+            </h1>
+          </div>
+          <div class="profile__about">
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+          </div>
+          <div>
+            <button class="profile__resume">Download Resume</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="posts">
+        <!-- Section 2 -->
+        <div class="posts__title">
+          <h3>Recent posts</h3>
+          <p>View all</p>
+        </div>
+        <div class="posts__grid">
+          <!-- set a grid on this div -->
+          <div class="card">
+            <!-- first card -->
+            <h2>Making a design system from scratch</h2>
+            <p class="card__duration">
+              12 Feb 2020 <span class="card__divider">|</span> Design, Pattern
+            </p>
+            <!-- special paragraph-->
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+          </div>
+          <div class="card">
+            <!-- second card -->
+            <h2>Creating pixel perfect icons in Figma</h2>
+            <p class="card__duration">
+              12 Feb 2020<span class="card__divider">|</span>Figma, Icon Design
+            </p>
+            <!-- special paragraph-->
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-works">
+        <!-- third section -->
+        <h3 class="featured-works__title">Featured works</h3>
+        <div class="cards">
+          <!-- set flexbox on this article -->
+          <article class="featured-works__card">
+            <div>
+              <img
+                src="/images/dashboards.png"
+                alt="Dashboards"
+                class="featured-works__photo"
+              />
+            </div>
+            <div class="featured-works__summary">
+              <h2>Designing Dashboards</h2>
+              <div class="featured-works__mid">
+                <!-- set this div to display: flex -->
+                <div class="featured-works__year">
+                  <p>2020</p>
+                </div>
+                <p class="featured-works__description">Dashboard</p>
+              </div>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet.
+              </p>
+            </div>
+          </article>
+          <article class="featured-works__card">
+            <div>
+              <img
+                src="/images/portrait.png"
+                alt="Portrait"
+                class="featured-works__photo"
+              />
+            </div>
+            <div class="featured-works__summary">
+              <h2>Vibrant Portraits of 2020</h2>
+              <div class="featured-works__mid">
+                <!-- set this div to display: flex -->
+                <div class="featured-works__year">
+                  <p>2018</p>
+                </div>
+                <p class="featured-works__description">Illustration</p>
+              </div>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet.
+              </p>
+            </div>
+          </article>
+          <article class="featured-works__card">
+            <div>
+              <img
+                src="/images/malayalam.png"
+                alt="Malayalam"
+                class="featured-works__photo"
+              />
+            </div>
+            <div class="featured-works__summary">
+              <h2>36 Days of Malayalam type</h2>
+              <div class="featured-works__mid">
+                <!-- set this div to display: flex -->
+                <div class="featured-works__year">
+                  <p>2018</p>
+                </div>
+                <p class="featured-works__description">Typography</p>
+              </div>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logos">
+        <!-- set flex box on this div-->
+        <img src="images/facebook.png" alt="Facebook" />
+        <img src="images/insta.png" alt="Instagram" />
+        <img src="images/twitter.png" alt="Twitter" />
+        <img src="images/Linkedin.png" alt="LinkedIn" />
+      </div>
+      <div class="footer__copyright">Copyright ©2020 All rights reserved</div>
+    </footer>
+  </body>
+</html>

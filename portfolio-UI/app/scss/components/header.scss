@@ -1,0 +1,150 @@
+@use "../util/" as *;
+
+.header {
+  display: none;
+
+  @include breakpoint-down(small) {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: rem(50);
+
+    &__menu-button {
+      margin: rem(20) rem(12) rem(12) 0;
+      background-color: transparent;
+      border: none;
+      width: rem(30);
+      height: rem(18);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__menu-icon,
+    &__menu-icon::before,
+    &__menu-icon::after {
+      background-color: var(--body-text);
+      width: rem(30);
+      height: 1.6px;
+      position: absolute;
+      display: block;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &__menu-icon::before,
+    &__menu-icon::after {
+      content: "";
+    }
+
+    &__menu-icon::before {
+      transform: translateY(rem(-9));
+    }
+
+    &__menu-icon::after {
+      transform: translateY(rem(9));
+    }
+  }
+}
+
+@include breakpoint-down(small) {
+  :is(header:hover, header:focus-within) .header__menu-icon {
+    background-color: transparent;
+    transform: rotate(720deg);
+  }
+
+  :is(header:hover, header:focus-within) .header__menu-icon::before {
+    transform: rotate(45deg);
+  }
+
+  :is(header:hover, header:focus-within) .header__menu-icon::after {
+    transform: rotate(-45deg);
+  }
+
+  :is(header:hover, header:focus-within) nav {
+    display: block;
+  }
+}
+
+.box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin: rem(27) rem(60) rem(140) 0;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: rem(33);
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+
+    font-size: rem(20);
+    font-weight: 500;
+    line-height: rem(29.38);
+
+    &:any-link {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      transition: all 0.3s;
+    }
+  }
+
+  @include breakpoint-down(small) {
+    background-color: var(--section-text);
+    display: none;
+    transform-origin: top center;
+    animation: showMenu 0.5s ease-in-out forwards;
+
+    ul {
+      flex-flow: column nowrap;
+    }
+
+    li {
+      padding: 0.5rem;
+      border-top: rem(1) solid var(--body-text);
+    }
+
+    a {
+      &:any-link {
+        color: var(--body-text);
+      }
+    }
+
+    @keyframes showMenu {
+      0% {
+        transform: scaleY(0);
+      }
+
+      80% {
+        transform: scaleY(1.2);
+      }
+
+      100% {
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+// Header active menu colors
+.active {
+  color: var(--btn-bg);
+}
