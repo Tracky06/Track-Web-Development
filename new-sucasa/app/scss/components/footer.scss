@@ -1,0 +1,60 @@
+@use "../util/" as *;
+
+.footer {
+  margin: rem(40) rem(20) rem(20);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  text-align: left;
+  gap: rem(15);
+
+  @include breakpoint(medium) {
+    margin: rem(80) rem(60) rem(20);
+    transform: translateY(rem(-65));
+    text-align: center;
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: rem(15);
+    place-content: center;
+
+    @include breakpoint(medium) {
+      justify-content: center;
+      justify-self: center;
+      margin-left: rem(90);
+      margin-right: rem(90);
+    }
+  }
+
+  &__icon {
+    width: rem(35);
+    height: rem(35);
+    border-radius: 50%;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+    justify-self: center;
+  }
+
+  &__address {
+    margin-top: rem(20);
+    text-align: left;
+
+    @include breakpoint(medium) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+  }
+}

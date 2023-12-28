@@ -1,0 +1,174 @@
+@use "../util/" as *;
+
+.header {
+  @include breakpoint(medium) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(50) rem(100) rem(25) rem(25);
+    transform: translateX(rem(-75));
+    width: 80%;
+  }
+
+  &__title-line {
+    height: rem(100);
+    padding: 0 rem(20) 0 rem(20);
+    align-self: center;
+    transform: translateY(rem(10));
+
+    @include breakpoint-down(small) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    transform: translateX(rem(-10));
+
+    @include breakpoint(medium) {
+      transform: scale(0.7);
+    }
+  }
+
+  &__menu-button {
+    display: none;
+
+    @include breakpoint-down(small) {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: none;
+      width: rem(50);
+      height: rem(50);
+      cursor: pointer;
+      position: relative;
+    }
+  }
+
+  &__menu-icon,
+  &__menu-icon::before,
+  &__menu-icon::after {
+    @include breakpoint-down(small) {
+      background-color: var(--footer-text);
+      height: rem(5);
+      border-radius: rem(5);
+      width: rem(40);
+      position: absolute;
+    }
+  }
+
+  &__menu-icon::before,
+  &__menu-icon::after {
+    @include breakpoint-down(small) {
+      content: "";
+    }
+  }
+
+  &__menu-icon::before {
+    @include breakpoint-down(small) {
+      transform: translate(rem(-20), rem(-12));
+    }
+  }
+
+  &__menu-icon::after {
+    @include breakpoint-down(small) {
+      transform: translate(rem(-20), rem(12));
+    }
+  }
+}
+
+@include breakpoint-down(small) {
+  :is(header:hover, header:focus-within) .header__menu-icon {
+    background-color: transparent;
+    transform: rotate(720deg);
+  }
+
+  :is(header:hover, header:focus-within) .header__menu-icon::before {
+    transform: rotate(45deg);
+  }
+
+  :is(header:hover, header:focus-within) .header__menu-icon::after {
+    transform: rotate(-45deg);
+  }
+
+  :is(header:hover, header:focus-within) nav {
+    display: block;
+    background-color: aliceblue;
+  }
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: rem(33);
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    width: 80%;
+    margin: auto;
+
+    font-size: 1rem;
+    line-height: rem(29.38);
+    color: var(--main-bg);
+
+    &:any-link {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      transition: all 0.3s;
+    }
+  }
+
+  @include breakpoint-down(small) {
+    display: none;
+    transform-origin: top center;
+    animation: showMenu 0.5s ease-in-out forwards;
+
+    ul {
+      flex-flow: column nowrap;
+    }
+
+    li {
+      padding: 0.5rem;
+      border-top: rem(1) solid var(--footer-text);
+    }
+
+    a {
+      &:any-link {
+        color: var(--main-bg);
+      }
+    }
+
+    @keyframes showMenu {
+      0% {
+        transform: scale(0);
+      }
+
+      80% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}

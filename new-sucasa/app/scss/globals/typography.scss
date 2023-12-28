@@ -1,0 +1,23 @@
+@use "../util/" as *;
+
+h1 {
+  @include breakpoint(medium) {
+    font-size: rem(36);
+    font-weight: normal;
+    line-height: rem(12);
+  }
+}
+
+h2 {
+  @include breakpoint(medium) {
+    font-size: rem(30);
+    font-weight: normal;
+    margin-top: rem(30);
+  }
+}
+
+p {
+  @include breakpoint(medium) {
+    font-size: 0.8rem;
+  }
+}
