@@ -85,6 +85,16 @@
           transform: scale(0.7);
         }
       }
+      .header__icon {
+        height: 3.125rem;
+        transform: translate(0.3125rem, 1.375rem);
+        width: 15.625rem;
+      }
+      @media (max-width: 47.9375em) {
+        .header__icon {
+          transform: translate(-0.3125rem, 0.1875rem);
+        }
+      }
       .header__menu-button {
         display: none;
       }
@@ -310,7 +320,11 @@
       <section class="header__title-line">
         <div class="header__logo">
           <a href="https://sucasa.com.gh" target="_blank">
-            <img src="/images/sucasa-logo-1.png" alt="sucasa-logo" />
+            <img
+              src="https://sucasa.com.gh/sucasa_logo_3.jpeg"
+              alt="sucasa-logo"
+              class="header__icon"
+            />
           </a>
         </div>
         <button class="header__menu-button">

@@ -34,6 +34,16 @@
     }
   }
 
+  &__icon {
+    width: rem(250);
+    height: rem(50);
+    transform: translate(rem(5), rem(22));
+
+    @include breakpoint-down(small) {
+      transform: translate(rem(-5), rem(3));
+    }
+  }
+
   &__menu-button {
     display: none;
 
