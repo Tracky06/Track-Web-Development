@@ -27,6 +27,7 @@
 
   &__logo {
     transform: translateX(rem(-10));
+    cursor: pointer;
 
     @include breakpoint(medium) {
       transform: scale(0.7);
