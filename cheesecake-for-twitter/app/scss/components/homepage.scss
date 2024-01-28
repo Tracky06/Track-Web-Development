@@ -1,0 +1,82 @@
+@use "../util/" as *;
+
+.homepage {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 0 0 rem(126);
+
+  &__hero-title {
+    width: rem(864);
+    height: rem(166);
+    font-family: var(--font-inika);
+    font-weight: 400;
+    font-size: rem(69);
+    line-height: rem(82.8);
+    color: var(--primary-text);
+  }
+
+  &__sub {
+    margin: rem(28) 0 rem(38) 0;
+    width: rem(427);
+    height: rem(58);
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(28.8);
+    color: hsla(0, 42%, 7%, 0.75);
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: rem(147) rem(167);
+    height: rem(56);
+    gap: rem(12);
+  }
+
+  &__button-1 {
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: rem(100);
+    cursor: pointer;
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: rem(15);
+    line-height: rem(18);
+    color: var(--nav-active-bg);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+
+  &__button-2 {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
+    background: transparent;
+    border: rem(1) solid hsla(21, 42%, 17%, 1);
+    border-radius: rem(100);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+
+    div {
+      font-family: var(--font-poppins);
+      font-weight: 600;
+      font-size: rem(15);
+      line-height: rem(18);
+      color: var(--primary-text);
+    }
+  }
+
+  &__photo {
+    transform: translate(rem(-160), rem(-90));
+  }
+}

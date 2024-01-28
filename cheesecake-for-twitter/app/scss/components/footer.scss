@@ -1,0 +1,44 @@
+@use "../util/" as *;
+
+.footer {
+  width: rem(837);
+  height: rem(48.74);
+  margin: 0 rem(483) rem(66.26) rem(120);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: rem(45.37);
+
+  &__socials {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: rem(17.21);
+  }
+
+  &__icons {
+    background-color: white;
+    width: rem(51.62);
+    height: rem(51.62);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+  }
+
+  &__trademark {
+    width: rem(529);
+    height: rem(27);
+
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: rem(22);
+    line-height: rem(26.63);
+    color: var(--primary-text);
+
+    span {
+      color: white;
+      font-weight: 400;
+      margin-right: rem(7.51);
+    }
+  }
+}

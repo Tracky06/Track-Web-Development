@@ -1,0 +1,65 @@
+@use "../util/" as *;
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: rem(6) rem(196) 0 rem(94);
+
+  nav {
+    width: rem(446);
+    height: rem(43);
+    background-color: var(--nav-bg);
+    border-radius: rem(10);
+    margin-left: rem(225);
+  }
+
+  &__menu-section {
+    display: grid;
+    width: rem(446);
+    height: rem(43);
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+  }
+
+  li {
+    list-style-type: none;
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: rem(19.36);
+    text-align: center;
+    align-self: center;
+
+    a {
+      color: var(--nav-active-bg);
+      display: grid;
+      place-content: center;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--nav-bg);
+      background-color: var(--nav-active-bg);
+      border-radius: rem(10);
+      height: rem(43);
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    width: rem(104);
+    height: rem(49);
+    border: rem(2) solid var(--primary-text);
+    border-radius: rem(38);
+    background: transparent;
+    margin: 0 rem(230) 0 rem(210);
+    cursor: pointer;
+    display: block;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}

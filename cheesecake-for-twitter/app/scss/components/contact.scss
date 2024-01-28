@@ -1,0 +1,86 @@
+@use "../util/" as *;
+
+.contact {
+  width: rem(1231);
+  height: rem(655.74);
+  margin: 0 rem(89) rem(69) rem(120);
+
+  &__title {
+    width: fit-content;
+    height: rem(83);
+
+    font-family: var(--font-inika);
+    font-weight: 400;
+    font-size: rem(64);
+    line-height: rem(83.39);
+    color: var(--primary-text);
+  }
+
+  &__section {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__info {
+    width: rem(800);
+    height: rem(62);
+
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: rem(31);
+    color: var(--primary-text);
+  }
+
+  &__name-pass {
+    display: block;
+    width: rem(325);
+    height: rem(62);
+    margin-bottom: rem(21);
+    padding-left: rem(24);
+    border: none;
+    border-radius: rem(60);
+    box-shadow: 0 rem(4) rem(4) 0 hsla(0, 0%, 0%, 0.26);
+
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: rem(24.2);
+    text-align: left;
+  }
+
+  &__message {
+    width: rem(325);
+    height: rem(161);
+    border: none;
+    border-radius: rem(26);
+    padding: rem(23.38) 0 0 rem(24.11);
+    margin-bottom: rem(23.98);
+
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: rem(24.2);
+  }
+
+  &__submit {
+    display: block;
+    width: rem(444);
+    height: rem(68.67);
+    background-color: hsla(36, 97%, 60%, 1);
+    border: none;
+    border-radius: rem(60);
+    box-shadow: 0 rem(4) rem(4) 0 hsla(0, 0%, 0%, 0.25);
+    cursor: pointer;
+
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: rem(29.05);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../util/" as *;
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+
+  &__photo {
+    transform: translateY(rem(-125));
+    margin: 0 rem(46) 0 rem(57);
+  }
+
+  &__hero {
+    margin: rem(68) rem(150) 0 0;
+    width: rem(570);
+    height: rem(374);
+  }
+
+  &__hero-title {
+    width: 100%;
+    height: rem(78);
+    font-family: var(--font-inika);
+    font-weight: 400;
+    font-size: rem(58);
+    line-height: rem(78.18);
+    color: var(--primary-text);
+  }
+
+  &__hero-subtitle {
+    width: rem(375);
+    height: rem(36);
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: rem(36);
+    color: hsla(0, 40%, 7%, 0.75);
+    margin-bottom: rem(25);
+  }
+
+  &__sub {
+    width: rem(558);
+    height: rem(182);
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: rem(24.2);
+    color: hsla(0, 0%, 0%, 0.7);
+  }
+
+  &__button {
+    width: rem(170);
+    height: rem(56);
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: rem(100);
+    box-shadow: 0 rem(5) rem(11) 0 hsla(0, 0%, 0%, 0.1);
+    cursor: pointer;
+
+    // button text
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: rem(19.2);
+    color: var(--nav-active-bg);
+
+    // button hover and focus states
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}

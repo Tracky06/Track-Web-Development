@@ -1,0 +1,123 @@
+@use "../util/" as *;
+
+.menu {
+  width: rem(1287);
+  height: rem(545);
+  margin: 0 rem(33) 0 rem(120);
+
+  &__title {
+    width: fit-content;
+    height: rem(83);
+    margin: 0 auto;
+
+    font-family: var(--font-inika);
+    font-weight: 400;
+    font-size: rem(64);
+    line-height: rem(83.39);
+    text-align: center;
+    color: var(--primary-text);
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(65);
+    margin: rem(27) 0 rem(48);
+  }
+
+  &__item {
+    width: rem(355);
+    height: rem(351);
+    border-radius: rem(39);
+    background-color: var(--menu-bg);
+    box-shadow: rem(2) rem(9) rem(42) 0 hsla(40, 27%, 24%, 0.5);
+  }
+
+  &__photo {
+    display: grid;
+    place-content: center;
+    margin-top: rem(33);
+  }
+
+  &__subtitle {
+    width: rem(254);
+    height: rem(33);
+    margin: rem(22) rem(35) 0 rem(18);
+    font-family: var(--font-inika);
+    font-weight: 700;
+    font-size: rem(25);
+    line-height: rem(32.57);
+    color: var(--menu-main-text);
+  }
+
+  &__text {
+    width: rem(286);
+    height: rem(16);
+    margin: 0 0 rem(22) rem(18);
+
+    font-family: var(--font-recursive);
+    font-weight: 400;
+    font-size: rem(13);
+    line-height: rem(15.6);
+    color: var(--menu-secondary-text);
+  }
+
+  &__bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 rem(35) 0 rem(18);
+
+    & > div {
+      font-family: var(--font-inter);
+      font-weight: 700;
+      font-size: rem(21);
+      line-height: rem(25.41);
+      color: hsla(21, 26%, 36%, 1);
+    }
+  }
+
+  &__stars {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(158);
+    height: rem(29);
+    transform: translateX(rem(1160));
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: hsla(46, 100%, 94%, 1);
+  }
+
+  &__btn-txt {
+    width: rem(122);
+    text-align: left;
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: rem(29.05);
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  width: rem(9);
+  height: rem(17);
+  transform: translate(rem(-15), rem(-2));
+}
+
+.dollar {
+  font-size: rem(18);
+  line-height: rem(21.78);
+  color: hsla(98, 65%, 39%, 1);
+}

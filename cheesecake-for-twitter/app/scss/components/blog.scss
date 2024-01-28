@@ -1,0 +1,98 @@
+@use "../util/" as *;
+
+.blog {
+  margin: rem(121) auto rem(96);
+  width: rem(1241);
+  height: rem(734);
+
+  &__subtitle {
+    width: rem(170);
+    height: rem(24);
+    margin: 0 auto;
+
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: rem(22);
+    line-height: rem(24);
+    text-align: center;
+    color: hsla(23, 39%, 33%, 1);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(94);
+    width: 100%;
+    margin-top: rem(76);
+  }
+
+  &__item {
+    width: rem(346);
+    height: rem(551);
+    background-color: hsla(46, 100%, 94%, 1);
+    border-radius: rem(19);
+    padding: rem(39);
+    box-shadow: rem(-2) rem(-9) rem(42) 0 hsla(40, 27%, 24%, 0.38);
+  }
+
+  &__image {
+    transform: translateX(rem(7));
+    margin-bottom: rem(24);
+  }
+
+  &__date {
+    width: rem(256);
+    height: rem(23);
+    margin-bottom: rem(8);
+
+    font-family: var(--font-outfit);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: rem(22.68);
+    color: hsla(22, 53%, 48%, 1);
+  }
+
+  &__heading {
+    width: rem(306);
+    height: rem(66);
+    margin-bottom: rem(12);
+
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: rem(22);
+    line-height: rem(33);
+    color: hsla(23, 39%, 33%, 1);
+  }
+
+  &__info {
+    width: rem(259);
+    height: rem(66);
+    margin-bottom: rem(30);
+
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    font-size: rem(12.5);
+    line-height: rem(18.75);
+    color: hsla(24, 37%, 32%, 1);
+  }
+
+  button {
+    width: rem(92.16);
+    height: rem(22.12);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: rem(15);
+    line-height: rem(22.5);
+    color: hsla(23, 39%, 33%, 1);
+    text-align: left;
+  }
+}
+
+// auxiliary classes
+.adjust {
+  transform: translateX(rem(20));
+}

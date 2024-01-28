@@ -1,0 +1,9 @@
+@use "../util/" as *;
+
+body {
+  background-image: url("../../../images/main_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: rem(1440);
+  overflow-x: hidden;
+}
